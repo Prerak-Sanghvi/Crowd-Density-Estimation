@@ -28,7 +28,7 @@ class CrowdDataset(Dataset):
         if self.transform:
             image = self.transform(image)
         else:
-            image = cv2.resize(image, (1024, 680))  # Resize for consistency (optional)
+            image = cv2.resize(image, (1024, 680))  
             image = image / 255.0  # Normalize
             image = torch.from_numpy(image).permute(2, 0, 1).float()  # [C, H, W]
 

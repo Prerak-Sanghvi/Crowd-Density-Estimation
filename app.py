@@ -3,7 +3,7 @@ import torch
 import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
-from model import SimpleCNN  # Ensure this is defined as in your training code
+from model import SimpleCNN 
 import torchvision.transforms as transforms
 import io
 
@@ -22,7 +22,7 @@ model, device = load_model()
 def preprocess_image(img: Image.Image):
     transform = transforms.Compose([
         transforms.ToTensor(),
-        transforms.Resize((256, 256)),  # match model training size if required
+        transforms.Resize((256, 256)), 
     ])
     return transform(img).unsqueeze(0)  # Shape: [1, C, H, W]
 
@@ -50,7 +50,7 @@ def visualize(image_pil, density_map, count):
     st.pyplot(fig)
 
 # Streamlit UI
-st.title("Crowd Density Estimation 🧑‍🤝‍🧑📊")
+st.title("Crowd Density Estimation")
 st.markdown("Upload an image to estimate the number of people in it.")
 
 uploaded_file = st.file_uploader("Upload crowd image", type=["jpg", "jpeg", "png"])

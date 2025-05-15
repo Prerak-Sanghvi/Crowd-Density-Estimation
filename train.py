@@ -9,7 +9,7 @@ import os
 # Set the dataset path
 root_dir = r"C:\Users\Jaini Sanghvi\Desktop\Crowd Density Estimation Using CNN and Density Maps\dataset\UCF_CC_50"
 
-# Initialize dataset with downsample_ratio=4 (make sure this is set in dataloader.py)
+# Initialize dataset with downsample_ratio=4 
 dataset = CrowdDataset(root_dir)
 
 # Split into training and validation
