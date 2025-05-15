@@ -1,0 +1,18 @@
+# Ignore dataset and outputs
+data/
+output/
+*.mat
+
+# Ignore large model files (use Git LFS instead)
+models/*.pth
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints
